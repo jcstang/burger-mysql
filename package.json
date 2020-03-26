@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/jcstang/burger-mysql#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.0",
+    "lodash": "^4.17.15",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "chalk": "^3.0.0",
