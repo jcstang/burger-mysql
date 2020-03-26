@@ -9,7 +9,7 @@ app.use(morgan('dev'));
 
 
 app.get('/', function(req, res) {
-  res.end('hi!');
+  res.end('Hey there, code: ' + res.statusCode);
 });
 
 
