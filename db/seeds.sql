@@ -1,8 +1,5 @@
 
 -- example seeds
-INSERT INTO cats (name) VALUES ('Meeses');
-INSERT INTO cats (name) VALUES ('Bobbi');
-INSERT INTO cats (name, sleepy) VALUES ('Sylvester', true);
-INSERT INTO cats (name, sleepy) VALUES ('Marilyn Manson', true);
-INSERT INTO cats (name, sleepy) VALUES ('Joe Biden', true);
-INSERT INTO cats (name) VALUES ('Owens');
+INSERT INTO burgers (name, hasBeenEaten) VALUES ('BBQ Baco Burger', false);
+INSERT INTO burgers (name, hasBeenEaten) VALUES ('Avacado Burger');
+INSERT INTO burgers (name, hasBeenEaten) VALUES ('Texas Burger', true);

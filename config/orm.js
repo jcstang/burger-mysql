@@ -39,13 +39,13 @@ function objToSql(object) {
 // ORM object we are exporting
 // ===================================================
 let orm = {
-  all: function(tableInput, cb) {
+  all: function(tableInput, callback) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
-      cb(result);
+      callback(result);
     });
   },
 
