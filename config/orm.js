@@ -40,6 +40,9 @@ function objToSql(object) {
 // ===================================================
 let orm = {
   all: function(tableInput, callback) {
+    console.log(tableInput);
+    console.log(callback);
+    
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
