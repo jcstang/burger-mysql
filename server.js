@@ -27,5 +27,5 @@ app.use(burgerRoutes);
 
 
 app.listen(PORT, function() {
-  debug(`listening on port ${chalk.cyanBright(PORT)}`);
+  // debug(`listening on port ${chalk.cyanBright(PORT)}`);
 });
