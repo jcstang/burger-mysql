@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     };
     console.log(handlebarsObject);
     res.render("index", handlebarsObject);
-  })
+  });
 });
 
 router.get('/api/burgers', function(req, res) {
