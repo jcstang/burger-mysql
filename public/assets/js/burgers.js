@@ -1,25 +1,61 @@
 $(document).ready(function() {
   console.log('ready!');
+
+  let formSubmitted = false;
   
+
+  // $(".burger-form").on("submit", function(event) {
+  //   // Make sure to preventDefault on a submit event.
+  //   event.preventDefault();
+  
+  //   if (submitted === false) {
+  //     let newBurger = {
+  //       name: $('#burgerInput').val().trim(),
+  //       hasBeenEaten: false
+  //     };
+    
+  //     console.log(newBurger);
+  //     submitted = true;
+  //     $("#burgerInput").val(' ');
+
+  //     saveToDB(newBurger);
+  //   }
+
+  //   // TODO: save to DB?
+  //   // TODO: create card on the left
+    
+
+  //   // $('#burgerInput').val('');
+  // });
+
   $(".burger-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
+
+    if(!formSubmitted) {
+      let newBurger = {
+        name: $('#burgerInput').val().trim(),
+        hasBeenEaten: 0
+      };
   
-    let newBurger = {
-      name: $('#burgerInput').val().trim(),
-      hasBeenEaten: false
-    };
-  
-    console.log(newBurger);
-    // TODO: save to DB?
-    // TODO: create card on the left
-    
+      // Send the POST request.
+      $.ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger
+      })
+      .then(function(data) {
+        console.log("created new burger ");
+        console.log(data);
+        
+        // Reload the page to get the updated list
+        // location.reload();
+      });
+
+      formSubmitted = true;
+    }
+
 
   });
-
-  function loadBurgers() {
-    
-  }
 
 
   //end of document ready
