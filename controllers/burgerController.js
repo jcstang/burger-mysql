@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const chalk = require('chalk');
 const _ = require('lodash');
 
 // 1. import model
@@ -17,8 +18,12 @@ router.get('/', (req, res) => {
   });
 });
 
+// GET ALL BURGERS
+// =================================================
 router.get('/api/burgers', function(req, res) {
   burger.all(function(data) {
+    console.log(`list of burgers i need to load`);
+    
     console.log(data);
     // debug(data);
     // res.end("hi");
@@ -28,15 +33,6 @@ router.get('/api/burgers', function(req, res) {
 
 // CREATE
 // =================================================
-// router.post('/api/burgers', function(req, res) {
-//   console.log(req);
-  
-//   burger.create(["name", "hasBeenEaten"], [req.body.name, req.body.hasBeenEaten], function(result) {
-//     res.json({ id: result.insertId });
-//   });
-  
-// });
-
 router.post("/api/burgers", function(req, res) {
   // console.log(req);
   
@@ -45,6 +41,8 @@ router.post("/api/burgers", function(req, res) {
   function(result) {
     // Send back the ID of the new quote
     // console.log(result.insertId);
+    console.log(`Success, the new burger id is: ${chalk.cyanBright(result.insertId)}`);
+    
     res.json({ id: result.insertId });
   });
 });
