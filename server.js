@@ -1,5 +1,5 @@
 const express = require('express');
-const debug = require('debug')('server');
+//const debug = require('debug')('server');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const expressHandleBars = require('express-handlebars');
