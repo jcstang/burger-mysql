@@ -50,6 +50,8 @@ let orm = {
       }
       callback(result);
     });
+
+    // connection.end();
   },
 
   create: function(table, cols, vals, cb) {

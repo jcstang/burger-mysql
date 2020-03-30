@@ -2,31 +2,6 @@ $(document).ready(function() {
   console.log('ready!');
 
   let formSubmitted = false;
-  
-
-  // $(".burger-form").on("submit", function(event) {
-  //   // Make sure to preventDefault on a submit event.
-  //   event.preventDefault();
-  
-  //   if (submitted === false) {
-  //     let newBurger = {
-  //       name: $('#burgerInput').val().trim(),
-  //       hasBeenEaten: false
-  //     };
-    
-  //     console.log(newBurger);
-  //     submitted = true;
-  //     $("#burgerInput").val(' ');
-
-  //     saveToDB(newBurger);
-  //   }
-
-  //   // TODO: save to DB?
-  //   // TODO: create card on the left
-    
-
-  //   // $('#burgerInput').val('');
-  // });
 
   $(".burger-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
@@ -45,10 +20,10 @@ $(document).ready(function() {
       })
       .then(function(data) {
         console.log("created new burger ");
-        console.log(data);
+        // console.log(data);
         
         // Reload the page to get the updated list
-        // location.reload();
+        location.reload();
       });
 
       formSubmitted = true;
@@ -56,6 +31,8 @@ $(document).ready(function() {
 
 
   });
+
+  
 
 
   //end of document ready
