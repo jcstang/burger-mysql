@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     };
     console.log(handlebarsObject);
     res.render("index", handlebarsObject);
-  })
+  });
 });
 
 router.get('/api/burgers', function(req, res) {
@@ -26,13 +26,32 @@ router.get('/api/burgers', function(req, res) {
   });
 });
 
-router.post('/api/burgers', function(req, res) {
-  burger.create(["name", "hasBeenEaten"], [req.body.name, req.body.hasBeenEaten], function(result) {
+// CREATE
+// =================================================
+// router.post('/api/burgers', function(req, res) {
+//   console.log(req);
+  
+//   burger.create(["name", "hasBeenEaten"], [req.body.name, req.body.hasBeenEaten], function(result) {
+//     res.json({ id: result.insertId });
+//   });
+  
+// });
+
+router.post("/api/burgers", function(req, res) {
+  // console.log(req);
+  
+  burger.create(["name", "hasBeenEaten"], 
+  [req.body.name, req.body.hasBeenEaten], 
+  function(result) {
+    // Send back the ID of the new quote
+    // console.log(result.insertId);
     res.json({ id: result.insertId });
   });
-  
 });
 
+
+// UPDATE
+// =================================================
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
