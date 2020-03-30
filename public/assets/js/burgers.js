@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log('ready!');
   
-  $(".create-form").on("submit", function(event) {
+  $(".burger-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
   
@@ -11,9 +11,15 @@ $(document).ready(function() {
     };
   
     console.log(newBurger);
+    // TODO: save to DB?
+    // TODO: create card on the left
     
 
   });
+
+  function loadBurgers() {
+    
+  }
 
 
   //end of document ready
