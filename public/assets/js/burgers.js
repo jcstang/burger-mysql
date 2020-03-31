@@ -29,9 +29,12 @@ $(document).ready(function() {
       formSubmitted = true;
     }
 
-
   });
 
+  // devour btn clicked
+  // =================================================
+  // TODO: remove from left
+  // TODO: add to the right. $().detach()
   
 
 
