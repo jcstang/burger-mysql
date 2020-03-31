@@ -37,12 +37,38 @@ $(document).ready(function() {
   // TODO: add to the right. $().detach()
 
   $('.devour-it').on('click', (event) => {
-    // console.log( $(this).parent() );
+    // console.log( $(this).detach() );
 
-    let burger = $(this).parent().detach();
-    console.log(burger);
+    // let burger = $(this).parent().parent().detach();
+    // console.log(burger);
 
-    console.log( $('.burger-card-whole').attr('data-burger') );
+    // console.log( $('.burger-card-whole').attr('data-burger') );
+    
+
+    // let selectedId = $('.burger-card-whole').attr('data-burger');
+    let selectedId = $(this);
+    var offset = $(this);
+
+    console.log(event);
+    console.log(event.target);
+    
+    
+    
+    $(event.target).remove();
+    
+    
+    
+    // console.log(selectedId);
+    
+    // let card = $("div[data-burger|='1']").detach();
+    // let c ard = $(`div[data-burger|=${formSubmitted}]`).detach();
+
+    // console.log(card);
+    
+
+    
+    
+
     
     
     

@@ -1,12 +1,10 @@
-<div class="container burger-card-whole" data-burger="{{id}}" >
+<div class="container burger-card-whole" id="burger-{{id}}" >
 	<div class="card" style="width: 18rem;">
 		<img src="/assets/imgs/amirali-mirhashemian-sc5sTPMrVfk-unsplashx280.png" class="card-img-top">
 		<div class="card-body">
 			<h5 class="card-title">{{name}}</h5>
 			<p class="card-text">{{hasBeenEaten}}</p>
 		</div>
-		<div class="card-footer">
-			<a href="#" data-burger="{{id}}" class="btn btn-primary devour-it">Devour it!</a>
-		</div>
+		<a data-burger="{{id}}" class="btn btn-primary devour-it">Devour it!</a>
 	</div>
 </div>
