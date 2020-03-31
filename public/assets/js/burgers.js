@@ -35,6 +35,22 @@ $(document).ready(function() {
   // =================================================
   // TODO: remove from left
   // TODO: add to the right. $().detach()
+
+  $('.devour-it').on('click', (event) => {
+    // console.log( $(this).parent() );
+
+    let burger = $(this).parent().detach();
+    console.log(burger);
+
+    console.log( $('.burger-card-whole').attr('data-burger') );
+    
+    
+    
+    
+    // let burgerCard = $('.burger-card-whole').detach();
+    // console.log(burgerCard);
+    
+  });
   
 
 
