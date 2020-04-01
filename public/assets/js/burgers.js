@@ -50,11 +50,16 @@ $(document).ready(function() {
     var offset = $(this);
 
     console.log(event);
-    console.log(event.target);
-    
-    
-    
-    $(event.target).remove();
+    // console.log(event.target);
+    console.log(event.target.offsetParent);
+
+    // detach?
+    let card = event.target.offsetParent;
+
+   $(".right-container").prepend(card);
+
+    //$("ul").find(`[data-slide='${current}']`)
+    // $(event.target).remove();
     
     
     
@@ -67,11 +72,7 @@ $(document).ready(function() {
     
 
     
-    
 
-    
-    
-    
     
     // let burgerCard = $('.burger-card-whole').detach();
     // console.log(burgerCard);
